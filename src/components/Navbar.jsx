@@ -94,9 +94,25 @@ const Navbar = () => {
 
   const handleNavClick = (e, href) => {
     e.preventDefault()
+    e.stopPropagation()
+    
+    // Close mobile menu first
     setIsMobileMenuOpen(false)
-    const element = document.querySelector(href)
-    element?.scrollIntoView({ behavior: 'smooth' })
+    
+    // Wait for menu to close, then scroll
+    setTimeout(() => {
+      const element = document.querySelector(href)
+      if (element) {
+        const navbarHeight = 80
+        const elementPosition = element.getBoundingClientRect().top
+        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        })
+      }
+    }, 300)
   }
 
   return (
