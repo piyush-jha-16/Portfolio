@@ -151,7 +151,6 @@ const Skills = () => {
             >
               <div className="skill-card-header">
                 <h3>{category.category}</h3>
-                <div className="skill-count">{category.skills.length}</div>
               </div>
               <div className="skill-items">
                 {category.skills.map((skill, skillIndex) => (

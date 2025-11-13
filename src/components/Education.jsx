@@ -9,9 +9,9 @@ const Education = () => {
 
   const educationData = [
     {
-      degree: 'Bachelor of Technology - CSE',
+      degree: 'B.Tech - CSE',
       institution: 'Jaypee University of Engineering and Technology',
-      period: 'Current - 3rd Year',
+      period: '2023-2027',
       grade: 'CGPA: 8.1/10',
       description: 'Pursuing B.Tech in Computer Science and Engineering with focus on software development, algorithms, data structures, and modern technologies.',
     },
