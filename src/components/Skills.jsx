@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import './Skills.css'
 
 const Skills = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const [flippedCards, setFlippedCards] = useState({})
 
   const skillsData = [
     {
@@ -136,40 +137,65 @@ const Skills = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          Skills
+          Skills & Technologies
         </motion.h2>
         
-        <div className="skills-grid">
+        <div className="skills-flip-grid">
           {skillsData.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
-              className="skill-card"
+              className="flip-card-wrapper"
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              whileHover={{ y: -10 }}
+              onMouseEnter={() => setFlippedCards(prev => ({ ...prev, [categoryIndex]: true }))}
+              onMouseLeave={() => setFlippedCards(prev => ({ ...prev, [categoryIndex]: false }))}
             >
-              <div className="skill-card-header">
-                <h3>{category.category}</h3>
-              </div>
-              <div className="skill-items">
-                {category.skills.map((skill, skillIndex) => (
-                  <motion.div
-                    key={skillIndex}
-                    className="skill-item"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ 
-                      duration: 0.4, 
-                      delay: categoryIndex * 0.1 + skillIndex * 0.05 
-                    }}
-                    whileHover={{ x: 10, scale: 1.05 }}
-                  >
-                    <span className="skill-icon">{skill.icon}</span>
-                    <span className="skill-name">{skill.name}</span>
-                  </motion.div>
-                ))}
-              </div>
+              <motion.div
+                className="flip-card-inner"
+                animate={{ rotateY: flippedCards[categoryIndex] ? 180 : 0 }}
+                transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+              >
+                {/* Front Face */}
+                <div className="flip-card-front">
+                  <div className="card-icon-container">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      {categoryIndex === 0 && <><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></>}
+                      {categoryIndex === 1 && <><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></>}
+                      {categoryIndex === 2 && <><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></>}
+                      {categoryIndex === 3 && <><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></>}
+                      {categoryIndex === 4 && <><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></>}
+                      {categoryIndex === 5 && <><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></>}
+                    </svg>
+                  </div>
+                  <h3 className="card-title">{category.category}</h3>
+                  <p className="card-subtitle">Hover to see more</p>
+                  <div className="card-arrow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Back Face */}
+                <div className="flip-card-back">
+                  <h4 className="back-title">{category.category}</h4>
+                  <div className="skills-grid-back">
+                    {category.skills.map((skill, skillIndex) => (
+                      <motion.div
+                        key={skillIndex}
+                        className="skill-badge-item"
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={flippedCards[categoryIndex] ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
+                        transition={{ delay: skillIndex * 0.05, duration: 0.2 }}
+                      >
+                        <div className="skill-badge-icon">{skill.icon}</div>
+                        <span className="skill-badge-name">{skill.name}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>

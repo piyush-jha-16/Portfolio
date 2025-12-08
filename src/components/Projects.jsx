@@ -14,6 +14,7 @@ const Projects = () => {
       description: 'A hands-on cybersecurity learning platform designed for practicing penetration testing and vulnerability exploitation in a safe, controlled environment. Features real-world scenarios and challenges.',
       tags: ['Python', 'Web Security', 'CTF', 'Ethical Hacking','OWASP Top 10'],
       link: 'https://github.com/piyush-jha-16/Interactive-Vulnerability-Lab',
+      liveDemo: 'https://github.com/piyush-jha-16/Interactive-Vulnerability-Lab',
       image: '/images/securestack-academy.png',
     },
     {
@@ -22,6 +23,7 @@ const Projects = () => {
       description: 'A secure password manager and encryption tool that uses advanced cryptographic algorithms to protect sensitive data. Features include password generation, secure storage, and multi-layer encryption for maximum security.',
       tags: ['Python', 'Cryptography', 'Security', 'Tkinter','Encryption'],
       link: 'https://github.com/piyush-jha-16/Cipher-Vault',
+      liveDemo: 'https://github.com/piyush-jha-16/Cipher-Vault',
       image: '/images/cipher-vault.png',
     },
     {
@@ -30,6 +32,7 @@ const Projects = () => {
       description: 'An intelligent threat detection and analysis system that monitors network traffic and identifies potential security threats using machine learning algorithms. Provides real-time alerts and threat intelligence.',
       tags: ['Python', 'Machine Learning', 'Threat Detection', 'Analytics'],
       link: 'https://github.com/piyush-jha-16/Threat-IQ',
+      liveDemo: 'https://github.com/piyush-jha-16/Threat-IQ',
       image: '/images/threat-iq.png',
     },
     {
@@ -38,6 +41,7 @@ const Projects = () => {
       description: 'An automated network security tool that scans and identifies potential vulnerabilities in network infrastructure. Provides detailed reports on security weaknesses and suggests remediation strategies.',
       tags: ['Python', 'Network Security', 'Penetration Testing', 'Scanning'],
       link: 'https://github.com/piyush-jha-16/Network-Vulnerability-Checker',
+      liveDemo: 'https://github.com/piyush-jha-16/Network-Vulnerability-Checker',
       image: '/images/network-risk.png',
     },
   ]
@@ -97,15 +101,29 @@ const Projects = () => {
                     </motion.span>
                   ))}
                 </div>
-                <motion.a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link"
-                  whileHover={{ x: 5 }}
-                >
-                  View Project →
-                </motion.a>
+                <div className="project-links">
+                  <motion.a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link live-demo"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    Live Demo
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="arrow-icon">
+                      <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                    </svg>
+                  </motion.a>
+                  <motion.a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link view-code"
+                    whileHover={{ x: 5 }}
+                  >
+                    View Code →
+                  </motion.a>
+                </div>
               </div>
             </motion.div>
           ))}
