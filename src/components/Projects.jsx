@@ -23,7 +23,7 @@ const Projects = () => {
       description: 'A secure password manager and encryption tool that uses advanced cryptographic algorithms to protect sensitive data. Features include password generation, secure storage, and multi-layer encryption for maximum security.',
       tags: ['Python', 'Cryptography', 'Security', 'Tkinter','Encryption'],
       link: 'https://github.com/piyush-jha-16/Cipher-Vault',
-      liveDemo: 'https://github.com/piyush-jha-16/Cipher-Vault',
+      liveDemo: 'https://cipher-vault-1.onrender.com/',
       image: '/images/cipher-vault.png',
     },
     {
