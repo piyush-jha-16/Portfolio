@@ -20,6 +20,12 @@
   animation: gridMove 20s linear infinite;
 }
 
+[data-theme="light"] .education-section::before {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
 @keyframes gridMove {
   0% {
     transform: translate(0, 0);
@@ -78,6 +84,17 @@
   );
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   animation: glow 2s ease-in-out infinite alternate;
+}
+
+[data-theme="light"] .timeline::before {
+  background: linear-gradient(to bottom, 
+    transparent,
+    rgba(0, 0, 0, 0.15) 10%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.15) 90%,
+    transparent
+  );
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes glow {

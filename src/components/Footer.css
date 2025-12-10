@@ -7,6 +7,11 @@
   z-index: 10;
 }
 
+[data-theme="light"] .footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /* Animated Grid Background */
 .grid-background {
   position: absolute;
@@ -27,6 +32,11 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
+}
+
+[data-theme="light"] .grid-item {
+  background: rgba(0, 0, 0, 0.01);
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .footer::before {
@@ -72,11 +82,22 @@
   background-clip: text;
 }
 
+[data-theme="light"] .footer-section h3 {
+  background: linear-gradient(135deg, #1a1a1a 0%, rgba(0, 0, 0, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .footer-about p {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   max-width: 350px;
+}
+
+[data-theme="light"] .footer-about p {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .footer-social {
@@ -98,6 +119,11 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+}
+
+[data-theme="light"] .footer-social-link {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .footer-social-link::before {
@@ -138,6 +164,10 @@
   position: relative;
 }
 
+[data-theme="light"] .footer-links a {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .footer-links a::after {
   content: '';
   position: absolute;
@@ -165,6 +195,10 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+[data-theme="light"] .footer-contact-item {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .footer-contact-item svg {
   flex-shrink: 0;
 }
@@ -173,6 +207,10 @@
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: color 0.3s ease;
+}
+
+[data-theme="light"] .footer-contact-item a {
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .footer-contact-item a:hover {
@@ -184,6 +222,10 @@
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   margin-bottom: 2rem;
+}
+
+[data-theme="light"] .footer-divider {
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.15), transparent);
 }
 
 .footer-bottom {
@@ -204,8 +246,19 @@
   margin: 0;
 }
 
+[data-theme="light"] .footer-copyright p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .footer-made {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.5) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] .footer-made {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

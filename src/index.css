@@ -18,6 +18,15 @@ html {
   --border: #333333;
 }
 
+[data-theme="light"] {
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a5568;
+  --accent: #2d3748;
+  --border: #cbd5e0;
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -20,6 +20,12 @@
   animation: gridMove 20s linear infinite, gridPulse 4s ease-in-out infinite;
 }
 
+[data-theme="light"] .projects-section::before {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
 @keyframes gridMove {
   0% {
     transform: translate(0, 0);
@@ -50,6 +56,10 @@
   animation: rotate 30s linear infinite, pulse 6s ease-in-out infinite;
   pointer-events: none;
   z-index: 0;
+}
+
+[data-theme="light"] .projects-section::after {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.03) 0%, transparent 70%);
 }
 
 @keyframes rotate {
@@ -97,6 +107,12 @@
   border-radius: 12px;
 }
 
+[data-theme="light"] .project-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
 .project-card::before {
   content: '';
   position: absolute;
@@ -126,6 +142,13 @@
   box-shadow: 0 20px 60px rgba(255, 255, 255, 0.15),
               inset 0 0 30px rgba(255, 255, 255, 0.03);
   transform: translateY(-10px);
+}
+
+[data-theme="light"] .project-card:hover {
+  border-color: rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12),
+              0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .project-image-container {
@@ -215,6 +238,11 @@
   overflow: hidden;
 }
 
+[data-theme="light"] .tag {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 .tag::before {
   content: '';
   position: absolute;
@@ -236,6 +264,12 @@
   color: var(--text-primary);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .tag:hover {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .project-links {
@@ -269,6 +303,10 @@
   height: 2px;
   background: var(--text-primary);
   transition: width 0.3s ease;
+}
+
+[data-theme="light"] .project-link::after {
+  background: var(--accent);
 }
 
 .project-link:hover::after {

@@ -24,6 +24,12 @@
   animation: gridMove 20s linear infinite;
 }
 
+[data-theme="light"] .hero-section::before {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
 @keyframes gridMove {
   0% {
     transform: translate(0, 0);
@@ -78,6 +84,13 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1.1;
+}
+
+[data-theme="light"] .hero-title {
+  background: linear-gradient(to right, #1a1a1a, #4a5568);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-subtitle {

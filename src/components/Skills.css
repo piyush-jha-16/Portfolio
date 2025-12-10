@@ -4,6 +4,10 @@
   min-height: 100vh;
 }
 
+[data-theme="light"] .skills-section {
+  background: var(--bg-primary);
+}
+
 .skills-section .section-title {
   text-align: center;
   font-size: 3rem;
@@ -68,9 +72,21 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+[data-theme="light"] .flip-card-front,
+[data-theme="light"] .flip-card-back {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
 .flip-card-front:hover {
   border-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] .flip-card-front:hover {
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .flip-card-front {
@@ -100,9 +116,18 @@
   transition: all 0.3s ease;
 }
 
+[data-theme="light"] .card-icon-container {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.04) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .flip-card-front:hover .card-icon-container {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
   transform: scale(1.05);
+}
+
+[data-theme="light"] .flip-card-front:hover .card-icon-container {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.06) 100%);
 }
 
 .card-icon-container svg {
@@ -142,9 +167,18 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+[data-theme="light"] .card-arrow {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .flip-card-front:hover .card-arrow {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.1) rotate(45deg);
+}
+
+[data-theme="light"] .flip-card-front:hover .card-arrow {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .back-title {
@@ -155,6 +189,10 @@
   text-align: center;
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .back-title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .skills-grid-back {
@@ -177,6 +215,11 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+[data-theme="light"] .skill-badge-item {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .skill-badge-item::before {
@@ -202,6 +245,12 @@
   border-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] .skill-badge-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .skill-badge-icon {

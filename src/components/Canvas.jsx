@@ -35,8 +35,14 @@ const Canvas = () => {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
+      // Check current theme
+      const isDark = document.documentElement.getAttribute('data-theme') !== 'light'
+      const gridColor = isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.08)'
+      const pointColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.15)'
+      const interactColor = isDark ? '255, 255, 255' : '0, 0, 0'
+
       // Draw grid
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)'
+      ctx.strokeStyle = gridColor
       ctx.lineWidth = 1
 
       // Vertical lines
@@ -67,13 +73,13 @@ const Canvas = () => {
             const size = circleRadius * (1 + (1 - distance / maxDistance))
 
             // Draw circle
-            ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 0.6})`
+            ctx.fillStyle = `rgba(${interactColor}, ${opacity * 0.6})`
             ctx.beginPath()
             ctx.arc(x, y, size, 0, Math.PI * 2)
             ctx.fill()
 
             // Draw connection line to mouse
-            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.3})`
+            ctx.strokeStyle = `rgba(${interactColor}, ${opacity * 0.3})`
             ctx.lineWidth = 1
             ctx.beginPath()
             ctx.moveTo(x, y)
@@ -81,7 +87,7 @@ const Canvas = () => {
             ctx.stroke()
           } else {
             // Normal grid points
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.1)'
+            ctx.fillStyle = pointColor
             ctx.beginPath()
             ctx.arc(x, y, 1, 0, Math.PI * 2)
             ctx.fill()
@@ -91,8 +97,8 @@ const Canvas = () => {
 
       // Draw glow around mouse
       const gradient = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 100)
-      gradient.addColorStop(0, 'rgba(255, 255, 255, 0.1)')
-      gradient.addColorStop(1, 'rgba(255, 255, 255, 0)')
+      gradient.addColorStop(0, `rgba(${interactColor}, 0.1)`)
+      gradient.addColorStop(1, `rgba(${interactColor}, 0)`)
       ctx.fillStyle = gradient
       ctx.fillRect(mouseX - 100, mouseY - 100, 200, 200)
 

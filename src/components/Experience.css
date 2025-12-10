@@ -21,6 +21,12 @@
   backdrop-filter: blur(10px);
 }
 
+[data-theme="light"] .experience-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
 .experience-card::before {
   content: '';
   position: absolute;
@@ -60,6 +66,13 @@
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
+}
+
+[data-theme="light"] .experience-card:hover {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1),
+              0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* Header Section */
@@ -103,6 +116,10 @@
   font-size: 1rem;
 }
 
+[data-theme="light"] .experience-separator {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .experience-location {
   font-size: 1.1rem;
   color: var(--text-secondary);
@@ -125,6 +142,11 @@
   color: var(--accent-color);
   border: 1px solid rgba(255, 255, 255, 0.2);
   white-space: nowrap;
+}
+
+[data-theme="light"] .experience-type {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .experience-duration {
@@ -176,6 +198,10 @@
   padding-top: 25px;
 }
 
+[data-theme="light"] .experience-technologies {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .tech-label {
   font-size: 0.95rem;
   color: var(--text-secondary);
@@ -203,11 +229,21 @@
   cursor: default;
 }
 
+[data-theme="light"] .tech-tag {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
 .tech-tag:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--primary-color);
   color: var(--primary-color);
   transform: translateY(-2px);
+}
+
+[data-theme="light"] .tech-tag:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: var(--primary-color);
 }
 
 /* Responsive Design */

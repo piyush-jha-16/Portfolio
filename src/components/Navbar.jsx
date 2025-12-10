@@ -6,12 +6,32 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
       setShowScrollTop(window.scrollY > 400)
+
+      // Detect active section
+      const sections = ['home', 'about', 'education', 'skills', 'projects', 'experience', 'contact']
+      const scrollPosition = window.scrollY + 100
+
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (element) {
+          const offsetTop = element.offsetTop
+          const offsetHeight = element.offsetHeight
+          
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section)
+            break
+          }
+        }
+      }
     }
+    
+    handleScroll() // Call once on mount
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -135,11 +155,18 @@ const Navbar = () => {
                 >
                   <a
                     href={item.href}
-                    className="nav-link"
+                    className={`nav-link ${activeSection === item.href.substring(1) ? 'active' : ''}`}
                     onClick={(e) => handleNavClick(e, item.href)}
                   >
                     <span className="nav-icon">{item.icon}</span>
                     <span className="nav-text">{item.name}</span>
+                    {activeSection === item.href.substring(1) && (
+                      <motion.span
+                        className="active-dot"
+                        layoutId="activeDot"
+                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      />
+                    )}
                   </a>
                 </motion.li>
               ))}
@@ -170,7 +197,7 @@ const Navbar = () => {
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className="mobile-link"
+                  className={`mobile-link ${activeSection === item.href.substring(1) ? 'active' : ''}`}
                   onClick={(e) => handleNavClick(e, item.href)}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -179,6 +206,9 @@ const Navbar = () => {
                 >
                   <span className="nav-icon">{item.icon}</span>
                   <span className="nav-text">{item.name}</span>
+                  {activeSection === item.href.substring(1) && (
+                    <span className="active-indicator" />
+                  )}
                 </motion.a>
               ))}
             </motion.div>
