@@ -14,7 +14,7 @@ const Projects = () => {
       description: 'A hands-on cybersecurity learning platform designed for practicing penetration testing and vulnerability exploitation in a safe, controlled environment. Features real-world scenarios and challenges.',
       tags: ['Python', 'Web Security', 'CTF', 'Ethical Hacking','OWASP Top 10'],
       link: 'https://github.com/piyush-jha-16/Interactive-Vulnerability-Lab',
-      liveDemo: 'https://github.com/piyush-jha-16/Interactive-Vulnerability-Lab',
+      liveDemo: 'https://interactive-vulnerability-lab.vercel.app/',
       image: '/images/securestack-academy.png',
     },
     {
