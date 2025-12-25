@@ -101,7 +101,6 @@ const Certifications = () => {
                   Verified
                 </div>
               </div>
-
               <div className="cert-content">
                 <h3 className="cert-title">{cert.title}</h3>
                 <div className="cert-issuer">
