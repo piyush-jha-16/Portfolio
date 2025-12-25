@@ -10,7 +10,7 @@ const Projects = () => {
   const projectsData = [
     {
       number: '01',
-      title: 'Interactive Vulnerability Lab',
+      title: 'SecureStack Academy - Interactive Vulnerability Lab',
       description: 'A hands-on cybersecurity learning platform designed for practicing penetration testing and vulnerability exploitation in a safe, controlled environment. Features real-world scenarios and challenges.',
       tags: ['Python', 'Web Security', 'CTF', 'Ethical Hacking','OWASP Top 10'],
       link: 'https://github.com/piyush-jha-16/Interactive-Vulnerability-Lab',
@@ -19,7 +19,7 @@ const Projects = () => {
     },
     {
       number: '02',
-      title: 'Cipher Vault',
+      title: 'Cipher Vault - Secure Password Manager',
       description: 'A secure password manager and encryption tool that uses advanced cryptographic algorithms to protect sensitive data. Features include password generation, secure storage, and multi-layer encryption for maximum security.',
       tags: ['Python', 'Cryptography', 'Security', 'Tkinter','Encryption'],
       link: 'https://github.com/piyush-jha-16/Cipher-Vault',
@@ -28,7 +28,16 @@ const Projects = () => {
     },
     {
       number: '03',
-      title: 'Threat IQ',
+      title: 'ThreatShield - Email Phishing Detection System',
+      description: 'An advanced email security solution that uses machine learning to detect and prevent phishing attacks. Features real-time analysis of email content, URL scanning, and automated threat intelligence to protect against sophisticated phishing attempts.',
+      tags: ['Python', 'Rule Based Detection', 'Email Security', 'Phishing Detection', 'Threat Intelligence'],
+      link: 'https://github.com/piyush-jha-16/ThreatShield-Phishing-Email-Detector',
+      liveDemo: 'https://threat-shield-phishing-email-detect.vercel.app/',
+      image: '/images/threatshield.png',
+    },
+    {
+      number: '04',
+      title: 'Threat IQ - Advanced Threat Scanner',
       description: 'An intelligent threat detection and analysis system that monitors network traffic and identifies potential security threats using machine learning algorithms. Provides real-time alerts and threat intelligence.',
       tags: ['Python', 'Machine Learning', 'Threat Detection', 'Analytics'],
       link: 'https://github.com/piyush-jha-16/Threat-IQ',
@@ -36,7 +45,7 @@ const Projects = () => {
       image: '/images/threat-iq.png',
     },
     {
-      number: '04',
+      number: '05',
       title: 'Network Vulnerability Checker',
       description: 'An automated network security tool that scans and identifies potential vulnerabilities in network infrastructure. Provides detailed reports on security weaknesses and suggests remediation strategies.',
       tags: ['Python', 'Network Security', 'Penetration Testing', 'Scanning'],
@@ -44,6 +53,7 @@ const Projects = () => {
       liveDemo: 'https://github.com/piyush-jha-16/Network-Vulnerability-Checker',
       image: '/images/network-risk.png',
     },
+    
   ]
 
   return (
