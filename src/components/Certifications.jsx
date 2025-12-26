@@ -79,8 +79,8 @@ const Certifications = () => {
     {
       title: 'Computer Networks & Communication',
       issuer: 'TakeUForward+',
-      date: 'January 2026',
-      credentialId: 'NPTEL-CN-2025-890',
+      date: 'December 2025',
+      credentialId: 'LHOUfCu_',
       description: 'Comprehensive certification covering network protocols, TCP/IP, routing algorithms, network security, wireless communications, and modern networking technologies.',
       skills: ['TCP/IP', 'Network Security', 'Routing Protocols', 'OSI Model', 'Network Architecture', 'Wireless Networks'],
       icon: (
@@ -90,7 +90,7 @@ const Certifications = () => {
         </svg>
       ),
       color: '#4CAF50',
-      verifyLink: '#',
+      verifyLink: 'https://static.takeuforward.org/certificates/certificate-LHOUfCu_.pdf',
     },
   ]
 
