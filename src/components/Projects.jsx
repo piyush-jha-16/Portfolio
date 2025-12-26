@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import './Projects.css'
 
 const Projects = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const [selectedImage, setSelectedImage] = useState(null)
 
   const projectsData = [
     {
@@ -53,6 +54,15 @@ const Projects = () => {
       liveDemo: 'https://github.com/piyush-jha-16/Network-Vulnerability-Checker',
       image: '/images/network-risk.png',
     },
+    {
+      number: '06',
+      title: 'Basic Vulnerability Detector',
+      description: 'A comprehensive Python-based cybersecurity scanning tool designed to perform network security assessments and vulnerability detection. This tool provides essential security scanning capabilities for network administrators and cybersecurity professionals.',
+      tags: ['Python', 'Network Scan', 'Port Scanning', 'Firewall Detection'],
+      link: 'https://github.com/piyush-jha-16/Basic-Vulnerability-Checker',
+      liveDemo: 'https://github.com/piyush-jha-16/Basic-Vulnerability-Checker',
+      image: '/images/basicVulner.png',
+    },
     
   ]
 
@@ -78,7 +88,7 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ y: -10 }}
             >
-              <div className="project-image-container">
+              <div className="project-image-container" onClick={() => setSelectedImage(project)}>
                 <img src={project.image} alt={project.title} className="project-image" />
                 <div className="project-overlay">
                   <motion.div 
@@ -139,6 +149,41 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
+      {/* Image Preview Modal */}
+      {selectedImage && (
+        <motion.div 
+          className="image-modal-overlay"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setSelectedImage(null)}
+        >
+          <motion.div 
+            className="image-modal-content"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              className="close-modal" 
+              onClick={() => setSelectedImage(null)}
+              aria-label="Close preview"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
+              </svg>
+            </button>
+            <img src={selectedImage.image} alt={selectedImage.title} className="modal-image" />
+            <div className="modal-info">
+              <h3>{selectedImage.title}</h3>
+              <p>{selectedImage.description}</p>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
     </section>
   )
 }
