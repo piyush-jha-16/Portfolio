@@ -26,39 +26,6 @@ const Certifications = () => {
       verifyLink: '#',
     },
     {
-      title: 'Digital Marketing Strategist',
-      issuer: 'Udemy',
-      date: 'March 2025',
-      credentialId: 'e804f8d6-2de4-48ee-89c6-c523072a47c0',
-      description: 'Professional certification in digital marketing strategies, SEO optimization, social media marketing, content creation, and analytics-driven campaigns.',
-      skills: ['SEO', 'Social Media Marketing', 'Content Strategy', 'Google Analytics', 'Campaign Management'],
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="48" height="48">
-          <line x1="18" y1="20" x2="18" y2="10"/>
-          <line x1="12" y1="20" x2="12" y2="4"/>
-          <line x1="6" y1="20" x2="6" y2="14"/>
-        </svg>
-      ),
-      color: '#A259FF',
-      verifyLink: 'https://www.udemy.com/certificate/UC-e804f8d6-2de4-48ee-89c6-c523072a47c0/',
-    },
-    {
-      title: 'TechA Ethical Hacking Expert',
-      issuer: 'Infosys Springboard',
-      date: 'November 2025',
-      credentialId: 'INF-TEHE-2024-123',
-      description: 'Expert-level certification in ethical hacking, penetration testing, vulnerability assessment, security auditing, and advanced cybersecurity practices.',
-      skills: ['Ethical Hacking', 'Penetration Testing', 'Security Auditing', 'Vulnerability Assessment', 'Network Security'],
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="48" height="48">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          <path d="M9 12l2 2 4-4"/>
-        </svg>
-      ),
-      color: '#00D9FF',
-      verifyLink: 'https://drive.google.com/file/d/1w6x0SSd3XzRUGTXBqjT4elbYsjFQTTQ3/view?usp=sharing',
-    },
-    {
       title: 'Object-Oriented Programming (OOPs) Mastery',
       issuer: 'TakeUForward+',
       date: 'September 2025',
@@ -92,6 +59,41 @@ const Certifications = () => {
       color: '#4CAF50',
       verifyLink: 'https://static.takeuforward.org/certificates/certificate-LHOUfCu_.pdf',
     },
+    
+    {
+      title: 'TechA Ethical Hacking Expert',
+      issuer: 'Infosys Springboard',
+      date: 'November 2025',
+      credentialId: 'INF-TEHE-2024-123',
+      description: 'Expert-level certification in ethical hacking, penetration testing, vulnerability assessment, security auditing, and advanced cybersecurity practices.',
+      skills: ['Ethical Hacking', 'Penetration Testing', 'Security Auditing', 'Vulnerability Assessment', 'Network Security'],
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="48" height="48">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+      ),
+      color: '#00D9FF',
+      verifyLink: 'https://drive.google.com/file/d/1w6x0SSd3XzRUGTXBqjT4elbYsjFQTTQ3/view?usp=sharing',
+    },
+    {
+      title: 'Digital Marketing Strategist',
+      issuer: 'Udemy',
+      date: 'March 2025',
+      credentialId: 'e804f8d6-2de4-48ee-89c6-c523072a47c0',
+      description: 'Professional certification in digital marketing strategies, SEO optimization, social media marketing, content creation, and analytics-driven campaigns.',
+      skills: ['SEO', 'Social Media Marketing', 'Content Strategy', 'Google Analytics', 'Campaign Management'],
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="48" height="48">
+          <line x1="18" y1="20" x2="18" y2="10"/>
+          <line x1="12" y1="20" x2="12" y2="4"/>
+          <line x1="6" y1="20" x2="6" y2="14"/>
+        </svg>
+      ),
+      color: '#A259FF',
+      verifyLink: 'https://www.udemy.com/certificate/UC-e804f8d6-2de4-48ee-89c6-c523072a47c0/',
+    },
+    
   ]
 
   return (
