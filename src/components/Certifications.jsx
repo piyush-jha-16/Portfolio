@@ -58,6 +58,40 @@ const Certifications = () => {
       color: '#00D9FF',
       verifyLink: 'https://drive.google.com/file/d/1w6x0SSd3XzRUGTXBqjT4elbYsjFQTTQ3/view?usp=sharing',
     },
+    {
+      title: 'Object-Oriented Programming (OOPs) Mastery',
+      issuer: 'TakeUForward+',
+      date: 'September 2025',
+      credentialId: 'NN1A-2hlbXI',
+      description: 'Advanced certification in Object-Oriented Programming principles including inheritance, polymorphism, encapsulation, abstraction, and design patterns.',
+      skills: ['OOP Concepts', 'Design Patterns', 'Inheritance', 'Polymorphism', 'Encapsulation', 'SOLID Principles'],
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="48" height="48">
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+        </svg>
+      ),
+      color: '#FF3366',
+      verifyLink: 'https://static.takeuforward.org/certificate-2hLbXI.pdf',
+    },
+    {
+      title: 'Computer Networks & Communication',
+      issuer: 'TakeUForward+',
+      date: 'January 2026',
+      credentialId: 'NPTEL-CN-2025-890',
+      description: 'Comprehensive certification covering network protocols, TCP/IP, routing algorithms, network security, wireless communications, and modern networking technologies.',
+      skills: ['TCP/IP', 'Network Security', 'Routing Protocols', 'OSI Model', 'Network Architecture', 'Wireless Networks'],
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="48" height="48">
+          <circle cx="12" cy="12" r="2"/>
+          <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/>
+        </svg>
+      ),
+      color: '#4CAF50',
+      verifyLink: '#',
+    },
   ]
 
   return (
@@ -147,6 +181,8 @@ const Certifications = () => {
                 </div>
                 <motion.a
                   href={cert.verifyLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="verify-btn"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
