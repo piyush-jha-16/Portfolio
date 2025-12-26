@@ -88,8 +88,8 @@ function App() {
         <Experience />
         <Projects />
         <Education />
-        <Skills />
         <Certifications />
+        <Skills />
         <Contact />
       </main>
       
