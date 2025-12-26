@@ -11,6 +11,10 @@
   pointer-events: none;
 }
 
+body.modal-open .navbar {
+  display: none;
+}
+
 .navbar.scrolled {
   top: 15px;
 }
