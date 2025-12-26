@@ -82,8 +82,8 @@ const Hero = () => {
               View Work
             </motion.button>
             <motion.a
-              href="/Piyush_Jha_Resume.pdf"
-              download="Piyush_Jha_Resume.pdf"
+              href="/Resume_PiyushJha_L.pdf"
+              download="Resume_PiyushJha_L.pdf"
               className="btn btn-resume"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
