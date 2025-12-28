@@ -47,7 +47,7 @@ const Certifications = () => {
       title: 'Computer Networks & Communication',
       issuer: 'TakeUForward+',
       date: 'December 2025',
-      credentialId: 'LHOUfCu_',
+      credentialId: 'NN1A-LHOUfCu_',
       description: 'Comprehensive certification covering network protocols, TCP/IP, routing algorithms, network security, wireless communications, and modern networking technologies.',
       skills: ['TCP/IP', 'Network Security', 'Routing Protocols', 'OSI Model', 'Network Architecture', 'Wireless Networks'],
       icon: (
