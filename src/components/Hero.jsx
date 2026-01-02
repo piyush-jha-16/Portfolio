@@ -1,7 +1,44 @@
 import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
 import './Hero.css'
 
 const Hero = () => {
+  const titles = [
+    'Cybersecurity Enthusiast',
+    'Software Engineer',
+    'Agile Developer/Tester',
+    'Problem Solver'
+  ]
+  
+  const [titleIndex, setTitleIndex] = useState(0)
+  const [displayText, setDisplayText] = useState('')
+  const [isDeleting, setIsDeleting] = useState(false)
+  const [charIndex, setCharIndex] = useState(0)
+
+  useEffect(() => {
+    const currentTitle = titles[titleIndex]
+    const typingSpeed = isDeleting ? 50 : 100
+    const pauseTime = isDeleting ? 500 : 2000
+
+    if (!isDeleting && charIndex === currentTitle.length) {
+      setTimeout(() => setIsDeleting(true), pauseTime)
+      return
+    }
+
+    if (isDeleting && charIndex === 0) {
+      setIsDeleting(false)
+      setTitleIndex((prev) => (prev + 1) % titles.length)
+      return
+    }
+
+    const timeout = setTimeout(() => {
+      setDisplayText(currentTitle.substring(0, charIndex + (isDeleting ? -1 : 1)))
+      setCharIndex((prev) => prev + (isDeleting ? -1 : 1))
+    }, typingSpeed)
+
+    return () => clearTimeout(timeout)
+  }, [charIndex, isDeleting, titleIndex])
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -51,14 +88,14 @@ const Hero = () => {
             className="hero-subtitle"
             variants={itemVariants}
           >
-            <span className="typing-text">Cybersecurity Enthusiast</span>
+            <span className="typing-text">{displayText}<span className="cursor">|</span></span>
           </motion.div>
           
           <motion.p 
             className="hero-description"
             variants={itemVariants}
           >
-            Software Engineer | Developer | Problem Solver
+            Passionate about building secure and efficient solutions
           </motion.p>
           
           <motion.div 
