@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import './Footer.css'
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
+  const  currentYear = new Date().getFullYear()
 
   const socialLinks = [
     { 
