@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   padding: 100px 0;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   position: relative;
   overflow: hidden;
 }
