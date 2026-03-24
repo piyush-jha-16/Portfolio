@@ -9,7 +9,7 @@ const Hero = () => {
     'Agile Developer/Tester',
     'Problem Solver'
   ]
-  
+
   const [titleIndex, setTitleIndex] = useState(0)
   const [displayText, setDisplayText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
@@ -75,7 +75,7 @@ const Hero = () => {
         animate="visible"
       >
         <motion.div className="hero-content" variants={itemVariants}>
-          <motion.h1 
+          <motion.h1
             className="hero-title"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -83,22 +83,22 @@ const Hero = () => {
           >
             Piyush Jha
           </motion.h1>
-          
-          <motion.div 
+
+          <motion.div
             className="hero-subtitle"
             variants={itemVariants}
           >
             <span className="typing-text">{displayText}<span className="cursor">|</span></span>
           </motion.div>
-          
-          <motion.p 
+
+          <motion.p
             className="hero-description"
             variants={itemVariants}
           >
             Passionate about building secure and efficient solutions
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             className="hero-buttons"
             variants={itemVariants}
           >
@@ -119,14 +119,14 @@ const Hero = () => {
               View Work
             </motion.button>
             <motion.a
-              href="/Resume_PiyushJha_L.pdf"
-              download="Resume_PiyushJha_L.pdf"
+              href="/Piyush_Jha_Resume.pdf"
+              download="Piyush_Jha_Resume.pdf"
               className="btn btn-resume"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
               </svg>
               Download Resume
             </motion.a>

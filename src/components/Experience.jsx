@@ -9,6 +9,21 @@ const Experience = () => {
 
   const experienceData = [
     {
+      position: 'Software Quality Analyst',
+      company: 'Growth Gear',
+      location: 'Remote',
+      duration: 'March 2026 - Present',
+      type: 'Internship',
+      achievements: [
+        'Conducted comprehensive manual and automated testing to ensure the delivery of high-quality software products.',
+        'Identified, documented, and tracked software defects, collaborating closely with developers for prompt resolution.',
+        'Developed and maintained detailed test cases and test scripts based on product requirements and user stories.',
+        'Participated in agile ceremonies and contributed to the continuous improvement of QA processes and testing methodologies.',
+        'Ensured a seamless user experience by performing exploratory testing and validating cross-platform compatibility.',
+      ],
+      technologies: ['Manual Testing', 'Automated Testing', 'Bug Tracking', 'Test Planning', 'Agile Methodologies', 'Quality Assurance'],
+    },
+    {
       position: 'Android Developer Intern',
       company: 'Consilio Intelligence and Research Lab',
       location: 'Noida, India',
