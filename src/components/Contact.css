@@ -15,7 +15,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
     linear-gradient(45deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
@@ -26,7 +26,7 @@
 }
 
 [data-theme="light"] .contact-section::before {
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
     linear-gradient(45deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
@@ -36,15 +36,19 @@
   0% {
     transform: translate(0, 0);
   }
+
   100% {
     transform: translate(50px, 50px);
   }
 }
 
 @keyframes gridFade {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.5;
   }
+
   50% {
     opacity: 1;
   }
@@ -68,15 +72,19 @@
   from {
     transform: translate(-50%, 50%) rotate(360deg);
   }
+
   to {
     transform: translate(-50%, 50%) rotate(0deg);
   }
 }
 
 @keyframes wave {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(-50%, 50%) scale(1);
   }
+
   50% {
     transform: translate(-50%, 45%) scale(1.1);
   }
@@ -139,13 +147,13 @@
 .contact-form-container:hover {
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1),
-              inset 0 0 30px rgba(255, 255, 255, 0.03);
+    inset 0 0 30px rgba(255, 255, 255, 0.03);
 }
 
 [data-theme="light"] .contact-form-container:hover {
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1),
-              0 4px 12px rgba(0, 0, 0, 0.05);
+    0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .contact-form {
@@ -301,13 +309,13 @@
 .contact-info-container:hover {
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1),
-              inset 0 0 30px rgba(255, 255, 255, 0.03);
+    inset 0 0 30px rgba(255, 255, 255, 0.03);
 }
 
 [data-theme="light"] .contact-info-container:hover {
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1),
-              0 4px 12px rgba(0, 0, 0, 0.05);
+    0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .contact-info-content h3 {
@@ -357,8 +365,8 @@
   background: rgba(0, 0, 0, 0.04);
   border-color: rgba(0, 0, 0, 0.1);
 }
-  transform: translateX(10px);
-}
+
+
 
 .contact-icon {
   width: 40px;
