@@ -77,6 +77,23 @@ const Certifications = () => {
       verifyLink: 'https://drive.google.com/file/d/1w6x0SSd3XzRUGTXBqjT4elbYsjFQTTQ3/view?usp=sharing',
     },
     {
+      title: 'TechA Network Hacking Prevention',
+      issuer: 'Infosys Springboard',
+      date: 'February 2026',
+      credentialId: 'INF-TEHE-2024-111',
+      description: 'Comprehensive certification covering network security principles, threat mitigation, vulnerability assessment, and intrusion prevention systems to defend against network-based cyber attacks.',
+      skills: ['Network Security', 'Threat Mitigation', 'Vulnerability Assessment', 'Intrusion Prevention', 'Cybersecurity'],
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="48" height="48">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M12 8v4"/>
+          <path d="M12 16h.01"/>
+        </svg>
+      ),
+      color: '#FFB300',
+      verifyLink: '#',
+    },
+    {
       title: 'Digital Marketing Strategist',
       issuer: 'Udemy',
       date: 'March 2025',
