@@ -12,7 +12,7 @@ const Education = () => {
       degree: 'B.Tech - CSE',
       institution: 'Jaypee University of Engineering and Technology',
       period: '2023-2027',
-      grade: 'CGPA: 8.1/10',
+      grade: 'CGPA: 8.3/10',
       description: 'Pursuing B.Tech in Computer Science and Engineering with focus on software development, algorithms, data structures, and modern technologies.',
     },
     {
@@ -42,7 +42,7 @@ const Education = () => {
         >
           Education
         </motion.h2>
-        
+
         <div className="timeline">
           {educationData.map((item, index) => (
             <motion.div
@@ -52,7 +52,7 @@ const Education = () => {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <motion.div 
+              <motion.div
                 className="timeline-dot"
                 whileHover={{ scale: 1.5 }}
                 transition={{ type: 'spring', stiffness: 300 }}
