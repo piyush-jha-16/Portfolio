@@ -6,6 +6,7 @@ const Hero = () => {
   const titles = [
     'Cybersecurity Enthusiast',
     'Software Engineer',
+    'Quality Assurance Engineer',
     'Agile Developer/Tester',
     'Problem Solver'
   ]
