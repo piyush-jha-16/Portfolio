@@ -2,11 +2,9 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import './Education.css'
-
 const Education = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
-
   const educationData = [
     {
       degree: 'B.Tech - CSE',
@@ -26,11 +24,10 @@ const Education = () => {
       degree: 'Secondary Education (10th)',
       institution: 'Vishwa Bharati Public School',
       period: '2019 - 2020',
-      grade: '93.6%',
+      grade: '93%',
       description: 'Completed 10th grade with distinction. Built strong fundamentals in core subjects including Mathematics, Science, and English.',
     },
   ]
-
   return (
     <section id="education" className="section education-section" ref={ref}>
       <div className="container">
