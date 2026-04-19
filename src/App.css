@@ -73,6 +73,8 @@ main {
   justify-content: center;
   padding: 100px 20px;
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
 }
 
 .container {
