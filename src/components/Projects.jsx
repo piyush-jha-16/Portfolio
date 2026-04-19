@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import './Projects.css'
 
 const Projects = () => {
@@ -23,6 +24,21 @@ const Projects = () => {
   const projectsData = [
     {
       number: '01',
+      title: 'ZeroQ: Post Quantum Cryptography Secured File Vault',
+      description: 'ZeroQ Vault is a post-quantum secure file sharing application built around browser-side encryption, sender authentication, and encrypted private-key recovery. The server stores only encrypted payloads, public keys, and metadata needed to deliver files between authenticated users.',
+      tags: ['Post-Quantum Cryptography', 'Browser Encryption', 'Authentication', 'Secure File Sharing'],
+      link: 'https://github.com/piyush-jha-16/ZeroQ-Post-Quantum-Cryptography-Secure-File-Vault',
+      liveDemo: 'https://github.com/piyush-jha-16/ZeroQ-Post-Quantum-Cryptography-Secure-File-Vault',
+      image: '/images/zeroq-pqc/1.png',
+      images: [
+        '/images/zeroq-pqc/1.png',
+        '/images/zeroq-pqc/2.png',
+        '/images/zeroq-pqc/3.png',
+        '/images/zeroq-pqc/4.png',
+      ],
+    },
+    {
+      number: '02',
       title: 'Threat Guard - Intelligent Threat Detection Platform',
       description: 'ThreatGuard Professional is a full-stack security platform designed for cybersecurity professionals and power users. It delivers deep file inspection, live URL analysis, network reconnaissance, and application monitoring all through a sleek, modern interface with dark mode support, PDF reporting, and role-based user management.',
       tags: ['React', 'TypeScript', 'FastAPI', 'Tailwind CSS', 'YARA'],
@@ -37,7 +53,7 @@ const Projects = () => {
       ],
     },
     {
-      number: '02',
+      number: '03',
       title: 'Cipher Vault - Secure Password Manager',
       description: 'A modern, secure password manager with military-grade encryption, Google OAuth integration, and a beautiful user interface. Store, manage, and organize your passwords with confidence. It features advanced hashing algorithms and seamless environment variable management to ensure your digital identity remains uncompromised.',
       tags: ['Flask', 'AES-256', 'Tailwind CSS', 'Google OAuth', 'JavaScript'],
@@ -52,7 +68,7 @@ const Projects = () => {
       ],
     },
     {
-      number: '03',
+      number: '04',
       title: 'ThreatShield - Email Phishing Detection System',
       description: 'A professional, enterprise-grade email phishing detection web application using rule-based and heuristic analysis. This system provides comprehensive security analysis without relying on AI or Machine Learning, using deterministic detection rules instead.',
       tags: ['Python Flask', 'Vanilla JS', 'Custom CSS', 'HTML5', 'Rule-Based Engine'],
@@ -67,7 +83,7 @@ const Projects = () => {
       ],
     },
     {
-      number: '04',
+      number: '05',
       title: 'SecureStack Academy - Interactive Vulnerability Lab',
       description: 'SecureStack Academy is a professional, interactive web application designed to teach cybersecurity professionals and enthusiasts about the OWASP Top 10 vulnerabilities through hands-on practice. Each lab offers two modes: Vulnerable Mode - Explore and exploit real vulnerabilities, Secure Mode - Learn how to fix and prevent attacks.',
       tags: ['Node.js', 'Express.js', 'SQLite', 'Vanilla JS', 'OWASP Top 10'],
@@ -82,7 +98,7 @@ const Projects = () => {
       ],
     },
     {
-      number: '05',
+      number: '06',
       title: 'Network Vulnerability Checker',
       description: 'A comprehensive full-stack web application for automated network security assessment and vulnerability scanning on Windows systems. This tool provides real-time security analytics, interactive threat visualization, and automated remediation capabilities for system administrators and security professionals.',
       tags: ['Python', 'Flask', 'PowerShell', 'Chart.js', 'Bootstrap'],
@@ -188,7 +204,7 @@ const Projects = () => {
       </div>
 
       {/* Image Preview Modal */}
-      {selectedImage && (
+      {selectedImage && createPortal(
         <motion.div
           className="image-modal-overlay"
           initial={{ opacity: 0 }}
@@ -253,7 +269,8 @@ const Projects = () => {
               <p>{selectedImage.description}</p>
             </div>
           </motion.div>
-        </motion.div>
+        </motion.div>,
+        document.body
       )}
     </section>
   )
