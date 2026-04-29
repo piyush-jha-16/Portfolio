@@ -26,8 +26,8 @@
 
 [data-theme="light"] .hero-section::before {
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(31, 59, 87, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 59, 87, 0.05) 1px, transparent 1px);
 }
 
 @keyframes gridMove {
@@ -87,7 +87,7 @@
 }
 
 [data-theme="light"] .hero-title {
-  background: linear-gradient(to right, #1a1a1a, #4a5568);
+  background: linear-gradient(to right, #15202b, #516173);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -98,7 +98,7 @@
   color: var(--text-secondary);
   margin-bottom: 15px;
   font-weight: 300;
-  letter-spacing: 3px;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
 }
 
@@ -153,18 +153,25 @@
   justify-content: center;
   gap: 8px;
   letter-spacing: 1px;
-  border-radius: 0;
+  border-radius: 999px;
+  box-shadow: none;
 }
 
 .btn-primary {
   background: var(--accent);
-  color: var(--bg-primary);
+  color: #111827;
   border: 2px solid var(--accent);
+  box-shadow: 0 10px 24px rgba(255, 255, 255, 0.08);
 }
 
 .btn-primary:hover {
   background: transparent;
   color: var(--accent);
+}
+
+[data-theme="light"] .btn-primary {
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(31, 59, 87, 0.16);
 }
 
 .btn-secondary {
@@ -174,8 +181,8 @@
 }
 
 .btn-secondary:hover {
-  background: var(--accent);
-  color: var(--bg-primary);
+  background: rgba(31, 59, 87, 0.06);
+  color: var(--accent);
 }
 
 .btn-resume {
@@ -184,6 +191,10 @@
   border: 2px solid var(--accent);
   position: relative;
   overflow: hidden;
+}
+
+[data-theme="light"] .btn-resume {
+  color: var(--accent);
 }
 
 .btn-resume::before {
@@ -203,7 +214,11 @@
 }
 
 .btn-resume:hover {
-  color: var(--bg-primary);
+  color: #111827;
+}
+
+[data-theme="light"] .btn-resume:hover {
+  color: #ffffff;
 }
 
 .btn-resume svg {
