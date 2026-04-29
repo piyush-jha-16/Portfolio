@@ -9,7 +9,7 @@
 
 [data-theme="light"] .footer {
   background: var(--bg-secondary);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(24, 34, 48, 0.08);
 }
 
 /* Animated Grid Background */
@@ -35,8 +35,8 @@
 }
 
 [data-theme="light"] .grid-item {
-  background: rgba(0, 0, 0, 0.01);
-  border: 1px solid rgba(0, 0, 0, 0.03);
+  background: rgba(31, 59, 87, 0.015);
+  border: 1px solid rgba(24, 34, 48, 0.03);
 }
 
 .footer::before {
@@ -83,7 +83,7 @@
 }
 
 [data-theme="light"] .footer-section h3 {
-  background: linear-gradient(135deg, #1a1a1a 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(135deg, #182230 0%, rgba(24, 34, 48, 0.72) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -97,7 +97,7 @@
 }
 
 [data-theme="light"] .footer-about p {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(24, 34, 48, 0.65);
 }
 
 .footer-social {
@@ -122,8 +122,8 @@
 }
 
 [data-theme="light"] .footer-social-link {
-  background: rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(24, 34, 48, 0.08);
 }
 
 .footer-social-link::before {
