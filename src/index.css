@@ -16,15 +16,25 @@ html {
   --text-secondary: #a0a0a0;
   --accent: #ffffff;
   --border: #333333;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-strong: rgba(255, 255, 255, 0.08);
+  --surface-border: rgba(255, 255, 255, 0.12);
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-strong: 0 20px 60px rgba(0, 0, 0, 0.18);
 }
 
 [data-theme="light"] {
-  --bg-primary: #f8f9fa;
-  --bg-secondary: #ffffff;
-  --text-primary: #1a1a1a;
-  --text-secondary: #4a5568;
-  --accent: #2d3748;
-  --border: #cbd5e0;
+  --bg-primary: #f4f1eb;
+  --bg-secondary: #fbfaf7;
+  --text-primary: #182230;
+  --text-secondary: #5b6575;
+  --accent: #1f3b57;
+  --border: #d9d2c8;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --surface-border: rgba(24, 34, 48, 0.08);
+  --shadow-soft: 0 10px 28px rgba(24, 34, 48, 0.08);
+  --shadow-strong: 0 22px 70px rgba(24, 34, 48, 0.12);
 }
 
 html {
@@ -37,9 +47,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--bg-primary);
+  background:
+    radial-gradient(circle at top left, rgba(31, 59, 87, 0.08), transparent 34%),
+    radial-gradient(circle at top right, rgba(24, 34, 48, 0.04), transparent 28%),
+    linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
   color: var(--text-primary);
   overflow-x: hidden;
+}
+
+[data-theme="light"] body {
+  background:
+    radial-gradient(circle at top left, rgba(31, 59, 87, 0.08), transparent 32%),
+    radial-gradient(circle at 80% 10%, rgba(24, 34, 48, 0.05), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, var(--bg-primary) 100%);
 }
 
 body.modal-open {
@@ -131,8 +151,8 @@ body.modal-open {
 /* Common Components */
 .tag {
   padding: 6px 14px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
   border-radius: 6px;
   color: var(--text-secondary);
   font-size: 0.85rem;
@@ -152,7 +172,7 @@ body.modal-open {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(31, 59, 87, 0.12), transparent);
   transition: left 0.5s ease;
 }
 
@@ -161,9 +181,9 @@ body.modal-open {
 }
 
 .tag:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: var(--surface-strong);
+  border-color: rgba(31, 59, 87, 0.18);
   color: var(--text-primary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-soft);
 }
