@@ -114,9 +114,9 @@
 }
 
 [data-theme="light"] .skill-card-static {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  background: var(--surface-strong);
+  border: 1px solid rgba(24, 34, 48, 0.08);
+  box-shadow: var(--shadow-soft);
 }
 
 .skill-card-static:hover {
@@ -126,8 +126,8 @@
 }
 
 [data-theme="light"] .skill-card-static:hover {
-  border-color: rgba(0, 0, 0, 0.12);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border-color: rgba(31, 59, 87, 0.16);
+  box-shadow: var(--shadow-strong);
 }
 
 .card-icon-container {
@@ -146,8 +146,8 @@
 }
 
 [data-theme="light"] .card-icon-container {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.04) 100%);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, rgba(31, 59, 87, 0.08) 0%, rgba(31, 59, 87, 0.03) 100%);
+  border: 1px solid rgba(24, 34, 48, 0.08);
 }
 
 .skill-card-static:hover .card-icon-container {
@@ -156,7 +156,7 @@
 }
 
 [data-theme="light"] .skill-card-static:hover .card-icon-container {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.06) 100%);
+  background: linear-gradient(135deg, rgba(31, 59, 87, 0.12) 0%, rgba(31, 59, 87, 0.06) 100%);
 }
 
 .card-icon-container svg {
@@ -175,7 +175,7 @@
 }
 
 [data-theme="light"] .card-title {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(24, 34, 48, 0.08);
 }
 
 .skills-grid-static {

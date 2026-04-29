@@ -96,9 +96,9 @@
 }
 
 [data-theme="light"] .certification-card {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  background: var(--surface-strong);
+  border: 1px solid rgba(24, 34, 48, 0.08);
+  box-shadow: var(--shadow-soft);
 }
 
 .certification-card::before {
@@ -124,8 +124,8 @@
 }
 
 [data-theme="light"] .certification-card:hover {
-  border-color: rgba(0, 0, 0, 0.12);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border-color: rgba(31, 59, 87, 0.16);
+  box-shadow: var(--shadow-strong);
 }
 
 .cert-header {
@@ -146,8 +146,8 @@
 }
 
 [data-theme="light"] .cert-icon {
-  background: rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(24, 34, 48, 0.08);
 }
 
 .cert-badge {
