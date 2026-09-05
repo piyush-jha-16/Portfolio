@@ -9,10 +9,23 @@ const Experience = () => {
 
   const experienceData = [
     {
+      position: 'Software Quality Assurance Engineer',
+      company: 'IndiaFirst Life',
+      location: 'Jaipur, Rajasthan',
+      duration: 'September 2026 - Present',
+      type: 'Full-time',
+      achievements: [
+        'Conducting comprehensive end-to-end QA testing for core insurance applications, ensuring smooth policy management, claims processing, and system reliability.',
+        'Performing functional, UI/UX, and cross-browser testing on customer-facing insurance portals and company websites to enhance user experience.',
+        'Collaborating with developers and product teams to identify, document, and resolve critical defects, improving overall application stability and security.'
+      ],
+      technologies: ['Web Application Testing', 'Insurance Domain QA', 'Functional Testing', 'Cross-browser Testing', 'Bug Tracking', 'Automated Testing', 'Manual Testing'],
+    },
+    {
       position: 'Software Quality Analyst',
       company: 'Growth Gear',
       location: 'Remote',
-      duration: 'March 2026 - Present',
+      duration: 'March 2026 - August 2026',
       type: 'Internship',
       achievements: [
         'Executed 180+ manual and automated test cases per sprint, improving release confidence and reducing pre-production defects by 28%.',
@@ -36,7 +49,7 @@ const Experience = () => {
         'Reduced overall code complexity by 20% through modular architecture and performance tuning.',
         'Participated in code reviews and contributed to technical documentation for the development team',
       ],
-      technologies: ['Java', 'XML', 'REST API', 'Git','GitHub', 'Agile Methodologies','Android Studio'],
+      technologies: ['Java', 'XML', 'REST API', 'Git', 'GitHub', 'Agile Methodologies', 'Android Studio'],
     },
   ]
 
@@ -51,7 +64,7 @@ const Experience = () => {
         >
           Experience
         </motion.h2>
-        
+
         <div className="experience-container">
           {experienceData.map((item, index) => (
             <motion.div
